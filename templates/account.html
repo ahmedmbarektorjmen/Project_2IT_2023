@@ -5,6 +5,24 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/files/css/loading.min.css">
+  <script>
+    window.onload = function () {
+      searchInput.click();
+      searchInput.focus();
+    };
+    // Redirect to the mobile version of the page if the screen width is below the threshold
+    function redirect() {
+      if (window.innerWidth > 800) {
+        document.innerhtml = "";
+        window.location.href = "/";
+      }
+    }
+
+    // Call the function when the page is loaded and when the window is resized
+    window.onload = redirect;
+    window.onresize = redirect;
+  </script>
   <link rel="shortcut icon" href="../files/icons/trolley.png" type="image/x-icon" />
   <link rel="shortcut icon" href="/files/icons/trolley.png" type="image/x-icon" />
   <link rel="stylesheet" href="/files/css/main.min.css" />
@@ -28,6 +46,11 @@
 </head>
 
 <body>
+  <div class="loading_animation" data-loading="true">
+    <div class="loading_image"></div>
+    <span class="loading_text_animation"></span>
+  </div>
+  <script src="/files/js/loading.js"></script>
   <header>
     <input type="checkbox" id="nav_check" hidden />
     <div class="align_label-span" style="display: flex; gap: 1rem">

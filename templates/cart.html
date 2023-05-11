@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/files/css/loading.min.css">
   <link rel="shortcut icon" href="/files/icons/trolley.png" type="image/x-icon" />
   <link rel="stylesheet" href="/files/css/main.min.css" />
   <link rel="stylesheet" href="/files/css/cart.min.css" />
@@ -25,6 +26,11 @@
 </head>
 
 <body>
+  <div class="loading_animation" data-loading="true">
+    <div class="loading_image"></div>
+    <span class="loading_text_animation"></span>
+  </div>
+  <script src="/files/js/loading.js"></script>
   <header>
     <input type="checkbox" id="nav_check" hidden />
     <div class="align_label-span" style="display: flex; gap: 1rem">

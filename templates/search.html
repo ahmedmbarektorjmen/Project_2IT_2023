@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/files/css/loading.min.css">
   <script>
     window.onload = function () {
       searchInput.click();
@@ -25,7 +26,6 @@
   <link rel="shortcut icon" href="/files/icons/trolley.png" type="image/x-icon" />
   <link rel="stylesheet" href="/files/css/search_mobile.min.css" />
   <link rel="stylesheet" href="/files/css/main.min.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,10 +38,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
     integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Shoppy.tn: Shopping...</title>
+  <title>Shoppy.tn: search</title>
 </head>
 
 <body>
+  <script src="/files/js/loading.js"></script>
   <header>
     <input type="text" name="search_input" class="search_input" id="search_input" placeholder="search..." autofocus />
     <button id="search_icon" class="search_icon fa-solid fa-magnifying-glass"></button>
@@ -71,6 +72,7 @@
       <button class="fa-solid fa-user fa-xl" style="color: #616161"></button>
     </a>
   </nav>
+
 
   <script src="/files/js/search.js"></script>
   <script src="/files/js/cart_span.js"></script>
