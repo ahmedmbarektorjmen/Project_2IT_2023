@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to shoppy</title>
+
+</head>
+
+<body>
+    <div class="root">
+        <div class="container">
+            <span>Login</span>
+            <input type="text" id="username" placeholder="username" required>
+            <input type="password" id="password" class="password" placeholder="password" required>
+            <button type="submit" class="login_btn" id="login_btn">login</button>
+        </div>
+        <button type="submit" class="logout_btn" id="logout_btn">logout</button>
+    </div>
+    <script>
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var login_btn = document.getElementById("login_btn")
+
+
+        login_btn.addEventListener("click", function () {
+            fetch("/login", {
+                method: "Post",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    username: username.value,
+                    password: password.value
+                })
+            })
+                .then(response => (response.json()))
+                .then((data) => {
+                    console.log(data)
+                })
+        });
+
+        // Get the button element with ID "logout_btn"
+        var logout_btn = document.getElementById("logout_btn");
+
+        // Attach an event listener to the button that sends a POST request to the /logout endpoint
+        logout_btn.addEventListener("click", function () {
+            fetch("/logout", {
+                method: "Post",
+                headers: { 'Content-Type': 'application/json' }
+            })
+                .then(response => (response.json()))
+                .then((data) => {
+                    console.log(data)
+                })
+        });
+
+
+    </script>
+</body>
+
+</html>
