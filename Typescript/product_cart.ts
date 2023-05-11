@@ -1,4 +1,3 @@
-console.clear;
 
 // Define productId variable outside the function
 let productId;

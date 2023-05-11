@@ -5,7 +5,7 @@ var searchInput = document.getElementById("search_input");
 // for mobile :
 if (window.innerWidth < 800) {
     window.onload = function () {
-        searchInput.setAttribute("class", "search_input animate");
+        searchInput.setAttribute("data-animate", "true");
     };
     function displayAllProducts() {
         fetch("/my_api")

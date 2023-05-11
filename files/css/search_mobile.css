@@ -29,12 +29,12 @@
     border-radius: 10px;
     box-sizing: border-box;
   }
-  header input.search_input.animate {
+  header input.search_input[data-animate=true] {
     transition: all 0.5s ease;
     width: 100%;
     opacity: 1;
   }
-  header input.search_input.animate ~ .search_icon {
+  header input.search_input[data-animate=true] ~ .search_icon {
     transition: all 0.5s ease;
     opacity: 1;
   }

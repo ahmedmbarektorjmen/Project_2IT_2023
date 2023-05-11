@@ -37,7 +37,8 @@ a:hover {
 header {
   position: fixed;
   background-color: hsla(0, 0%, 100%, 0.6);
-  backdrop-filter: blur(0.6rem);
+  -webkit-backdrop-filter: blur(0.6rem);
+          backdrop-filter: blur(0.6rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -333,7 +334,8 @@ table.products-small::-webkit-scrollbar {
     border-radius: 8px;
     width: 100%;
     height: 23.7087vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .bottom_navigation {
     display: flex;
@@ -537,4 +539,4 @@ table.products-small::-webkit-scrollbar {
     background-color: black;
     cursor: pointer;
   }
-}
+}/*# sourceMappingURL=main.css.map */

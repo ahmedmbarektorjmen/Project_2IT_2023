@@ -28,13 +28,13 @@
       padding-left: 2.2rem;
       border-radius: 10px;
       box-sizing: border-box;
-      &.animate {
+      &[data-animate="true"] {
         transition: all 0.5s ease;
         width: 100%;
         opacity: 1;
       }
     }
-    input.search_input.animate ~ .search_icon {
+    input.search_input[data-animate="true"] ~ .search_icon {
       transition: all 0.5s ease;
       opacity: 1;
     }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link rel="stylesheet" href="/files/css/loading.min.css">
   <link rel="shortcut icon" href="/files/icons/trolley.png" type="image/x-icon">
   <link rel="stylesheet" href="/files/css/main.min.css">
   <link rel="stylesheet" href="/files/css/footer.min.css">
@@ -27,6 +27,10 @@
 
 
 <body>
+  <div class="loading_animation" data-loading="true">
+    <div class="loading_image"></div>
+    <span class="loading_text_animation"></span>
+  </div>
   <header>
     <input type="checkbox" id="nav_check" hidden>
     <div class="align_label-span" style="display: flex; gap: 1rem;align-items: center;">
@@ -49,7 +53,7 @@
   </header>
 
 
-  <div id="resultsDiv" class="resultsDiv" style="display: none;"></div>
+  <div id="resultsDiv" class="resultsDiv" style="display: none;">ss</div>
   <nav class='navigation'>
     <label for="nav_check" class="arrow">
       <i class="fa-solid fa-arrow-left"></i>
