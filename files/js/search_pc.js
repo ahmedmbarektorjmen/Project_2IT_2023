@@ -50,7 +50,7 @@ function searchProducts() {
           ${foundProducts[i].name}
           </div>
           <div class="div_content_price">
-          ${foundProducts[i].price}
+          ${foundProducts[i].price + " DT"}
           </div>
           </div>
           </a>`;

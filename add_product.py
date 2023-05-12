@@ -29,4 +29,4 @@ description = input('Enter the description: ')
 price = input('Enter the price: ')
 
 # Example usage:
-add_product(name, "files/search/"+image, description, price)
+add_product(name, "/files/search/"+image, description, price)

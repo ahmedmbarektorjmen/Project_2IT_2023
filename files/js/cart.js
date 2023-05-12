@@ -6,6 +6,7 @@ if (cart.length !== 0) {
     // clear the root div
     root.innerText = "";
 }
+var TOTAL = 0
 // Loop through the cart items and display them on the page
 cart.forEach((item) => {
     let productId = item.id;
@@ -24,8 +25,13 @@ cart.forEach((item) => {
         <div class="product_name">${productName}</div>
         </a>
         <input type="number" min="1" max="20" class="quantity" value="${productQuantity}" disabled/>
-        <div class="price">${productPrice}</div>
+        <div class="price">${productPrice + " DT"}</div>
       <div class="button"><form><button id="removefromcart" class="removefromcart remove">remove</button></form></div>`;
+    TOTAL = TOTAL + parseFloat(productPrice) * productQuantity;
     root.appendChild(cart_product);
 });
+
+total = document.createElement("div")
+total.innerHTML = `<span>TOTAL: ${TOTAL}</span>`
+root.append(total);
 document.appendChild(root);

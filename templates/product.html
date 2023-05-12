@@ -75,12 +75,6 @@
     <li>
       <a href="/"><button>Smart Watch</button></a>
     </li>
-
-    <div class="switch_container">
-      <button>
-        <label for="echeme">Theme: <input type="checkbox" name="scheme" id="echeme" /></label>
-      </button>
-    </div>
   </nav>
 
   <div class="root">
@@ -92,7 +86,7 @@
       <div class="product_values">
         <h1 id="item-name">{{ product.name }}</h1>
 
-        <p>Prix: <span id="item-price">{{ product.price }}</span></p>
+        <p>Prix: <span id="item-price">{{ product.price + " DT"}}</span></p>
       </div>
 
       <div class="product_description">
