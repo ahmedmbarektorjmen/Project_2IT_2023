@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 .loading_animation[data-loading=true] .loading_image {
-  background: url("/files/loading/loading.gif");
+  background: url("/files/images/loading/loading.gif");
   background-size: contain;
   background-position: 0%, 0%;
   background-repeat: no-repeat;

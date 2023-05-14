@@ -15,11 +15,13 @@ body,
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+
   &::-webkit-scrollbar {
     width: 5px;
     height: 5px;
     border-radius: 100px;
   }
+
   &::-webkit-scrollbar-thumb {
     background: linear-gradient(-22deg, #00afff 0%, #000faa 50%, #00afff 100%);
     border-radius: 100px;
@@ -28,43 +30,18 @@ html {
 
 a {
   color: #222222;
+
   &:hover {
     color: #00f;
   }
 }
 
-header {
-  position: fixed;
-  background-color: hsla(0, 0%, 100%, 0.6);
-  backdrop-filter: blur(0.6rem);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  width: 100%;
-  height: 50px;
-  padding-left: 5px;
-  .logo {
-    font-family: "Courgette", cursive;
-    font-size: 2rem;
-    font-weight: 900;
-    .shoppy {
-      background-color: #ff0;
-    }
-  }
-  .align_input-button {
-    position: relative;
-    .cart {
-      display: none;
-    }
-    .search_icon {
-      display: none;
-    }
-  }
-  .search_input {
-    display: none;
-  }
+
+
+.search_input {
+  display: none;
 }
+
 
 .navigation_PC {
   z-index: 1;
@@ -79,6 +56,7 @@ header {
   height: 50px;
   align-items: center;
   justify-content: space-around;
+
   li {
     button {
       height: 40px;
@@ -86,16 +64,20 @@ header {
       background: none;
       border: 1px solid transparent;
       border-radius: 8px;
+
       &:hover {
         transition: 0.5s ease-in-out;
         background-color: #efebff;
         cursor: pointer;
+
         a {
           color: #000;
         }
+
         &:active {
           transition: 0.5s ease-in-out;
           background-color: #675cff;
+
           a {
             color: #dad9d9;
           }
@@ -110,19 +92,23 @@ table {
     overflow: scroll;
     display: flex;
     background: none;
+
     tr {
       height: 1%;
       background: none;
+
       td {
         border: 2px solid transparent;
         border-radius: 8px;
         cursor: pointer;
         background: none;
+
         img {
           background-color: none;
           border-radius: 8px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           transition: 0.5s ease;
+
           &:hover {
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
               rgba(0, 0, 0, 0.12) 0px -12px 30px,
@@ -132,6 +118,7 @@ table {
         }
       }
     }
+
     &::-webkit-scrollbar {
       background: none;
       width: 0;
@@ -139,6 +126,7 @@ table {
     }
   }
 }
+
 .slider_container {
   z-index: 0;
   margin: 1px 0 0 0;
@@ -147,6 +135,7 @@ table {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+
   img {
     z-index: 0;
     position: absolute;
@@ -154,12 +143,14 @@ table {
     opacity: 0;
     cursor: pointer;
     border-radius: 8px;
+
     &.active {
       transition: opacity 0.5s ease-in;
       opacity: 1;
     }
   }
 }
+
 // mobile :
 @media screen and (max-width: 800px) {
   .root {
@@ -178,6 +169,7 @@ table {
   .navigation_PC {
     display: none;
   }
+
   .navigation {
     overflow-y: scroll;
     z-index: 999999;
@@ -196,11 +188,13 @@ table {
     -webkit-backdrop-filter: blur(0.6rem);
     backdrop-filter: blur(0.6rem);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
     &::-webkit-scrollbar {
       opacity: 0;
       width: 0;
       height: 0;
     }
+
     li {
       button {
         height: 40px;
@@ -208,12 +202,14 @@ table {
         background: none;
         border: 1px solid transparent;
         border-radius: 10px;
+
         &:hover {
           transition: 0.5s ease-in;
           background: hsla(254, 100%, 93%, 0.6);
           -webkit-backdrop-filter: blur(0.6rem);
           backdrop-filter: blur(0.6rem);
           cursor: pointer;
+
           &:active {
             transition: all 0.5s ease-in;
             background-color: #1100ff;
@@ -224,6 +220,7 @@ table {
         }
       }
     }
+
     .switch_container {
       display: flex;
       justify-content: center;
@@ -233,6 +230,7 @@ table {
       bottom: 1rem;
       left: 0.5rem;
       margin-top: auto;
+
       button {
         height: 40px;
         width: 100%;
@@ -240,6 +238,7 @@ table {
         border: 1px solid transparent;
         border-radius: 8px;
         cursor: pointer;
+
         &:hover {
           transition: 0.5s ease-in-out;
           background: hsla(254, 100%, 93%, 0.6);
@@ -256,15 +255,18 @@ table {
     font-size: 1.9rem;
     cursor: pointer;
   }
+
   .arrow {
     top: 0.5rem;
     left: 0.5rem;
     font-size: 1.9rem;
     cursor: pointer;
   }
+
   .slider_controls {
     overflow: hidden;
     overflow: hidden;
+
     div {
       &:first-of-type {
         z-index: 1;
@@ -275,6 +277,7 @@ table {
         border-radius: 10px;
         display: flex;
         align-items: center;
+
         button {
           padding: 5px 10px;
           border-radius: 10px;
@@ -286,6 +289,7 @@ table {
           cursor: pointer;
         }
       }
+
       &:nth-of-type(2) {
         z-index: 1;
         position: absolute;
@@ -295,6 +299,7 @@ table {
         border-radius: 10px;
         display: flex;
         align-items: center;
+
         button {
           padding: 5px 10px;
           border-radius: 10px;
@@ -308,6 +313,7 @@ table {
       }
     }
   }
+
   div {
     &.products {
       overflow: hidden;
@@ -324,6 +330,7 @@ table {
       border: none;
       border-radius: 8px;
       gap: 0.5rem;
+
       a {
         border-radius: 8px;
         background: none;
@@ -331,6 +338,7 @@ table {
         width: auto;
         border-radius: 8px;
         cursor: pointer;
+
         &:hover {
           background: none;
           transition: 0.5s ease;
@@ -342,6 +350,7 @@ table {
             rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
             rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
+
         img {
           border-radius: 8px;
           width: 100%;
@@ -353,6 +362,7 @@ table {
       }
     }
   }
+
   .bottom_navigation {
     display: flex;
     justify-content: space-around;
@@ -366,6 +376,7 @@ table {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     overflow: hidden;
+
     .home {
       display: flex;
       justify-content: center;
@@ -378,16 +389,19 @@ table {
       border: 1px solid transparent;
       border-radius: 8px;
       cursor: pointer;
+
       &:hover {
         transition: 0.3s ease-in-out;
         background: #e4dbff;
       }
+
       button {
         background: none;
         border: none;
         cursor: pointer;
       }
     }
+
     .search_btn {
       display: flex;
       justify-content: center;
@@ -400,16 +414,19 @@ table {
       border: 1px solid transparent;
       border-radius: 8px;
       cursor: pointer;
+
       &:hover {
         transition: 0.3s ease-in-out;
         background: #e4dbff;
       }
+
       button {
         background: none;
         border: none;
         cursor: pointer;
       }
     }
+
     .cart {
       display: flex;
       justify-content: center;
@@ -422,16 +439,19 @@ table {
       border: 1px solid transparent;
       border-radius: 8px;
       cursor: pointer;
+
       &:hover {
         transition: 0.3s ease-in-out;
         background: #e4dbff;
       }
+
       button {
         background: none;
         border: none;
         cursor: pointer;
       }
     }
+
     .account {
       display: flex;
       justify-content: center;
@@ -444,10 +464,12 @@ table {
       border: 1px solid transparent;
       border-radius: 8px;
       cursor: pointer;
+
       &:hover {
         transition: 0.3s ease-in-out;
         background: #e4dbff;
       }
+
       button {
         background: none;
         border: none;
@@ -456,10 +478,13 @@ table {
     }
   }
 }
+
+// for PC
 @media only screen and (min-width: 801px) {
   * {
     font-family: "Open Sans", sans-serif;
   }
+
   .root {
     overflow-x: hidden;
     position: relative;
@@ -467,59 +492,21 @@ table {
     background: none;
     padding-top: 50px;
   }
-  header {
-    .align_input-button {
-      position: relative;
-      .cart {
-        display: none;
-      }
-      .search_input {
-        margin-right: 0.5rem;
-        border: none;
-        outline: none;
-        height: 2rem;
-        padding: 8px;
-        width: 250px;
-        border-radius: 10px;
-        background: #e0e0e0;
-      }
-      .search_icon {
-        display: inline-block;
-      }
-      .cart {
-        display: none;
-        display: inline-block;
-        height: 40px;
-        width: 60px;
-        background: none;
-        border: 1px solid transparent;
-        border-radius: 8px;
-        &:hover {
-          transition: 0.5s ease-in-out;
-          background: #e4dbff;
-          cursor: pointer;
-        }
-      }
-    }
-    .search_input {
-      display: inline-block;
-    }
-    .humburger {
-      display: none;
-    }
-  }
 
   nav {
     &.navigation {
       display: none;
     }
+
     &.bottom_navigation {
       display: none;
     }
   }
+
   .slider_controls {
     overflow: hidden;
     overflow: hidden;
+
     div {
       &:first-of-type {
         z-index: 1;
@@ -530,6 +517,7 @@ table {
         border-radius: 10px;
         display: flex;
         align-items: center;
+
         button {
           padding: 5px 10px;
           border-radius: 10px;
@@ -541,6 +529,7 @@ table {
           cursor: pointer;
         }
       }
+
       &:nth-of-type(2) {
         z-index: 1;
         position: absolute;
@@ -550,6 +539,7 @@ table {
         border-radius: 10px;
         display: flex;
         align-items: center;
+
         button {
           padding: 5px 10px;
           border-radius: 10px;

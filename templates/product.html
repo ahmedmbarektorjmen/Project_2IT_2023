@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/files/css/loading.min.css">
   <link rel="shortcut icon" href="/files/icons/trolley.png" type="image/x-icon" />
   <link rel="stylesheet" href="/files/css/main.min.css" />
+  <link rel="stylesheet" href="/files/css/header.min.css">
   <link rel="stylesheet" href="/files/css/product.min.css" />
   <link rel="stylesheet" href="/files/css/search_pc.min.css">
 
@@ -26,6 +27,12 @@
 </head>
 
 <body>
+  <div class="loading_animation" data-loading="true">
+    <div class="loading_image"></div>
+    <span class="loading_text_animation"></span>
+  </div>
+  <script src="/files/js/loading.js"></script>
+
   <header>
     <input type="checkbox" id="nav_check" hidden />
     <div class="align_label-span" style="display: flex; gap: 1rem">
@@ -42,9 +49,7 @@
         <a href="/cart.html"><i class="fa-solid fa-cart-shopping fa-xl" style="color: rgb(0, 0, 0)"><span
               id="cart_number" class="cart_number">0</span></i></a>
       </button>
-      <button class="login">
-        <a href="/login.html"><span>Login</span></a>
-      </button>
+      <a href="/login.html"><button class="login"><span>Login</span></button></a>
     </div>
   </header>
 

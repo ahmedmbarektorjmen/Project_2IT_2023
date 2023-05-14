@@ -5,9 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="/files/icons/trolley.png" type="image/x-icon">
+  <link rel="stylesheet" href="/files/css/loading.min.css">
   <link rel="stylesheet" href="/files/css/main.min.css">
-  <link rel="stylesheet" href="/files/css/footer.min.css">
+  <link rel="stylesheet" href="/files/css/header.min.css">
   <link rel="stylesheet" href="/files/css/search_pc.min.css">
+  <link rel="stylesheet" href="/files/css/footer.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -16,12 +18,11 @@
     integrity="sha512-WidMaWaNmZqjk3gDE6KBFCoDpBz9stTsTZZTeocfq/eDNkLfpakEd7qR0bPejvy/x0iT0dvzIq4IirnBtVer5A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
-  integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
-  integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/files/css/loading.min.css">
+    integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Shoppy.tn: Shopping...</title>
 </head>
 
@@ -48,7 +49,7 @@
       <button class="cart"><a href="/cart.html"><i class="fa-solid
                 fa-cart-shopping fa-xl" style="color: rgb(0, 0, 0);"><span id="cart_number"
               class="cart_number"></span></i></a></button>
-      <button class="login"><a href="/login.html"><span>Login</span></a></button>
+      <a href="/login.html"><button class="login"><span>Login</span></button></a>
     </div>
 
   </header>
@@ -143,7 +144,8 @@
 
     <div class="products">
       <a href="">
-        <img src="/files/images/timber/e72d9259dd1ae83bc3af3028004f1d321be2992d_lenovo-ideapad-3.jpg" alt="" />
+        <img id="PCs_section" src="/files/images/timber/e72d9259dd1ae83bc3af3028004f1d321be2992d_lenovo-ideapad-3.jpg"
+          alt="" />
       </a>
       <a href="">
         <img src="/files/images/timber/272642f422fad80b83b630e385d1d83dfe79c38b_Sans-titre-1.jpg" alt="" />
@@ -165,7 +167,8 @@
 
     <div class="products">
       <a href="">
-        <img src="/files/images/stockage/timbre-disque-dur-interne-msi-spatium-s270-1.webp" alt="" />
+        <img id="stockage_section" src="/files/images/stockage/timbre-disque-dur-interne-msi-spatium-s270-1.webp"
+          alt="" />
       </a>
     </div>
 
@@ -180,7 +183,8 @@
     <div class="products">
 
       <a href="">
-        <img src="/files/images/timber/28d4843856f849bdbc31f10183002e3e1a1a7b64_tv vega square.jpg" alt="" />
+        <img id="TVs_section" src="/files/images/timber/28d4843856f849bdbc31f10183002e3e1a1a7b64_tv vega square.jpg"
+          alt="" />
       </a>
     </div>
 
@@ -197,7 +201,8 @@
     <div class="products">
 
       <a href="">
-        <img src="/files/images/timber/e7bffd62594bd8d679d333bc788605df6b9c97a0_epson-l3210.jpg" alt="" />
+        <img id="prints_section" src="/files/images/timber/e7bffd62594bd8d679d333bc788605df6b9c97a0_epson-l3210.jpg"
+          alt="" />
       </a>
 
     </div>
@@ -228,7 +233,7 @@
 
     </div>
 
-    <table class="products-small">
+    <table class="products-small" id="kit_section">
       <tr>
         <td><img src="/files/images/kit/BHR6606GL-2.webp" alt="" /></td>
         <td><img src="/files/images/kit/F70T-WHITE.webp" alt="" /></td>
