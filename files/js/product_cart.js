@@ -1,13 +1,4 @@
-console.clear;
-// Define productId variable outside the function
-let productId;
-document
-    .getElementById("add_to_cart_button")
-    .addEventListener("click", function () {
-    // Call the addToCart() function with the product ID
-    addToCart();
-});
-function addToCart(productId) {
+addToCart = (productId) => {
     // Get the cart from localStorage
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     // Check if the product is already in the cart
@@ -45,3 +36,12 @@ function addToCart(productId) {
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Product added to cart!");
 }
+
+
+
+// Define productId variable outside the function
+let productId;
+const addToCart_btn = document.getElementById("add_to_cart_button");
+addToCart_btn.addEventListener("click",  () => {
+    addToCart();
+});

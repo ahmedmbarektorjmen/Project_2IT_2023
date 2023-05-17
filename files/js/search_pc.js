@@ -50,7 +50,7 @@ function searchProducts() {
           ${foundProducts[i].name}
           </div>
           <div class="div_content_price">
-          ${foundProducts[i].price + " DT"}
+          ${foundProducts[i].price}
           </div>
           </div>
           </a>`;
@@ -59,10 +59,10 @@ function searchProducts() {
         }
     });
 }
-searchInput.addEventListener("input", function () {
+searchInput.addEventListener("input", () => {
     searchProducts();
 });
-searchBtn.addEventListener("click", function (e) {
+searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     searchProducts(); // Call this function when the user clicks the search button
 });

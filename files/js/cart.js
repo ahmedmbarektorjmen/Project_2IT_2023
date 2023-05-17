@@ -1,4 +1,3 @@
-console.clear;
 // Get the cart data from localStorage and parse it as JSON
 const cart = JSON.parse(localStorage.getItem("cart"));
 var root = document.querySelector(".root");
@@ -6,7 +5,26 @@ if (cart.length !== 0) {
     // clear the root div
     root.innerText = "";
 }
-var TOTAL = 0
+
+var TOTAL = 0;
+
+const format_TOTAL = (productPrice,productQuantity) => {
+  let ch = ""
+  for (let i=0;i<productPrice.length;i++) {
+    if (productPrice[i] == ",") {
+      ch += "";
+    }
+    else {
+      ch += productPrice[i];
+    }
+  }
+  productPrice = ch;
+  productPrice = Number(productPrice.replace(' DT',""));
+  return productPrice;
+}
+
+
+
 // Loop through the cart items and display them on the page
 cart.forEach((item) => {
     let productId = item.id;
@@ -25,12 +43,13 @@ cart.forEach((item) => {
         <div class="product_name">${productName}</div>
         </a>
         <input type="number" min="5" max="20" class="quantity" value="${productQuantity}" disabled/>
-        <div class="price">${productPrice + " DT"}</div>
+        <div class="price">${productPrice}</div>
       <div class="button"><form><button id="removefromcart" class="removefromcart remove">remove</button></form></div>`;
+    TOTAL += (format_TOTAL(productPrice,productQuantity) * productQuantity);
     root.appendChild(cart_product);
 });
-
-total = document.createElement("div")
-total.innerHTML = `<span>TOTAL: ${TOTAL}</span>`
+total = document.createElement("div");
+TOTAL = Number(TOTAL).toLocaleString();
+total.innerHTML = `<span>TOTAL: ${TOTAL} DT</span>`;
 root.append(total);
 document.appendChild(root);

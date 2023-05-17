@@ -27,7 +27,7 @@ if (window.innerWidth < 800) {
         ${foundProducts[i].name}
         </div>
         <div class="div_content_price">
-        ${foundProducts[i].price + " DT"}
+        ${foundProducts[i].price}
         </div>
         </div>
         </a>`;
@@ -66,7 +66,7 @@ if (window.innerWidth < 800) {
         ${foundProducts[i].name}
         </div>
         <div class="div_content_price">
-        ${foundProducts[i].price + " DT"}
+        ${foundProducts[i].price}
         </div>
         </div>
         </a>`;
