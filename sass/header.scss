@@ -1,7 +1,9 @@
 header {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     position: fixed;
     background-color: hsla(0, 0%, 100%, 0.6);
     backdrop-filter: blur(0.6rem);
+    border-radius: 0 0 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,6 +64,7 @@ header {
             font-size: medium;
             font-weight: 900;
             border: 1px solid transparent;
+            border-radius: 0 0 10px 0px;
             cursor: pointer;
             position: relative;
             overflow: hidden;
@@ -99,6 +102,10 @@ header {
             &:hover {
                 transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
                 border: 1px solid black;
+                background-color: #ffff00c7;
+                backdrop-filter: blur(1rem);
+                transform: scale(0.92);
+                border-radius: 10px;
             }
 
         }
