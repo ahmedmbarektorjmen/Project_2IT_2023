@@ -11,54 +11,60 @@ searchInput.addEventListener("input", function () {
     }
 });
 function searchProducts() {
+
+    const simplify = (str) => {
+        return str.replace(/\s+/g, ' ').replace("<script></script>", "").replace("<script>", "").replace("<script", "").replace("</script>", "").replace(/\s+/g, ' ').trim().split(' ');
+    }
+
+    searchInput_value_array = [...new Set(simplify(searchInput.value))];
     searchInput_value = searchInput.value;
+
     fetch("/my_api")
         .then((result) => result.json())
         .then((data) => {
-        let foundProducts = [];
-        for (let i = 0; i < data.products.length; i++) {
-            if (data.products[i].name
-                .toLowerCase()
-                .indexOf(searchInput_value.toLowerCase()) !== -1 ||
-                data.products[i].description
-                    .toLowerCase()
-                    .indexOf(searchInput_value.toLowerCase()) !== -1) {
-                foundProducts.push(data.products[i]);
+            let foundProducts = [];
+            for (let i = 0; i < searchInput_value_array.length; i++) {
+                data.products.forEach(product => {
+                    if ((product.name.toLowerCase().indexOf(searchInput_value_array[i].toLowerCase()) !== -1) || (product.description.toLowerCase().indexOf(searchInput_value_array[i].toLowerCase()) !== -1)) {
+                        foundProducts.push(product);
+                    }
+                });
             }
-        }
-        resultsDiv.innerHTML = "";
-        for (let i = 0; i < foundProducts.length; i++) {
-            let div_product = document.createElement("div");
-            div_product.className = "div_product";
-            if (foundProducts.length === 0) {
-                div_product.innerHTML = `
-          <div class="div_content">
-          <div class="div_content_title">
-          there is no product with that name
-          </div>
-          </div>`;
-                resultsDiv.append(div_product);
+            foundProducts = [...new Set(foundProducts)];
+            if (foundProducts.length > 0) {
+                resultsDiv.innerHTML = "";
+                foundProducts.forEach((product) => {
+                    let div_product = document.createElement("div");
+                    div_product.className = "div_product";
+                    // append all elements as a child of the div_product element
+                    div_product.innerHTML = `
+                    <div>
+                    <img src="${product.image}">
+                    </div>
+                    <a href="/product/${product.id}">
+                    <div class="div_content">
+                    <div class="div_content_title">
+                    ${product.name}
+                    </div>
+                    <div class="div_content_price">
+                    ${product.price}
+                    </div>
+                    </div>
+                    </a>`;
+                    resultsDiv.append(div_product);
+                });
             }
             else {
-                div_product.innerHTML = `
-          <div>
-          <img src="${foundProducts[i].image}">
-          </div>
-          <a href="/product/${foundProducts[i].id}">
-          <div class="div_content">
-          <div class="div_content_title">
-          ${foundProducts[i].name}
-          </div>
-          <div class="div_content_price">
-          ${foundProducts[i].price}
-          </div>
-          </div>
-          </a>`;
-                resultsDiv.append(div_product);
+                resultsDiv.innerHTML = "";
+                resultsDiv.innerHTML = `<h1>Product Not Found !!!</h1>
+                <div>${searchInput_value}</div>`;
             }
-        }
-    });
+
+        });
 }
+
+
+
 searchInput.addEventListener("input", () => {
     searchProducts();
 });
